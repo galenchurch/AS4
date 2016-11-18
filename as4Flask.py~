@@ -11,10 +11,10 @@ def bay():
 @app.route('/as4/', methods=['POST', 'GET'])
 def hello():
     if request.method=='POST':
-        print request.form['finish']
+        print request.form
         return "done"
     else:
-	print request.form
+	print request.form['finish']
         return "get"
 
 if __name__ == "__main__":

@@ -1,5 +1,5 @@
 <body>
-	<form action="/as4" method="POST">
+	<form action="/gen" method="POST">
 		<div>Bay #1 Width: <input type="text" name="bday_wd_1"></div>
 		<div>Bay #2 Width: <input type="text" name="bday_wd_2"></div>
 		<div>Bay #3 Width: <input type="text" name="bday_wd_3"></div>
