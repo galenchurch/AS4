@@ -30,9 +30,9 @@ def hello():
             if x == '':
                 bays.pop(i)
         print bays
-        system = as4("N", request.form["mount"], request.form["finish"], 97, 0, bays)
-        print system
-        return system.genPn()
+        system = as4("N", request.form["mount"], request.form["finish"], request.form["ht_dig"], request.form["ht_dec"], bays)
+
+        return render_template("as4.html", hw=system.getHW(), pn=system.genPn())
     else:
         # print request.form
         return render_template("bay.html")
