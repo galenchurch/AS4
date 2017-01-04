@@ -1,11 +1,11 @@
 class as4:
-    def __init__(self, std_style,mnt_style,fnish, ht_dig,ht_dec, bays):
-        self.std_style = "N"
-        self.mnt_style = "B"
-        self.finish = "C"
-        self.ht_dig = 97
-        self.ht_dec = 0
-        self.bays = []
+    def __init__(self, std_style,mnt_style,finish, ht_dig,ht_dec, bays):
+        self.std_style = std_style
+        self.mnt_style = mnt_style
+        self.finish = finish
+        self.ht_dig = ht_dig
+        self.ht_dec = ht_dec
+        self.bays = bays
 
     def prompt(self):
         print("Welcome to part number generator for AS4")
@@ -26,8 +26,9 @@ class as4:
         return parts_list
 
     def genPn(self):
+        bay_fmt = ""
         for bay in self.bays:
-            print(bay)
+            bay_fmt = "{}{}".format(bay_fmt, bay)
             
         return"304-0001-{}{}{}-{}{}-{}".format(self.std_style, self.mnt_style, self.finish, self.ht_dig, self.ht_dec, bay_fmt)
 
